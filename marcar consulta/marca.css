@@ -1,0 +1,173 @@
+/* ========================
+   Estilo geral do corpo
+======================== */
+body {
+  font-family: Arial, sans-serif;
+  color: #111827;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Dá um espaço extra no topo pra não ficar colado na barra fixa */
+body > *:not(.topbar) {
+  margin-top: 100px; /* altura da topbar + espaçamento */
+}
+
+/* ========================
+   Topbar / Cabeçalho fixo
+======================== */
+:root {
+  --bg-topbar: #ffffff;
+  --text-topbar: #0f1723;
+  --color-med: #0ea5e9;
+  --color-dev: #14b8a6;
+  --page-bg: #f9fafb;
+}
+
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  background: var(--bg-topbar);
+  color: var(--text-topbar);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.brand {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.brand-med {
+  color: var(--color-med);
+}
+
+.brand-dev {
+  color: var(--color-dev);
+}
+
+.nav a {
+  color: var(--text-topbar);
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.nav a:hover {
+  opacity: 0.8;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 16px;
+  }
+
+  .nav {
+    margin-top: 8px;
+  }
+
+  body > *:not(.topbar) {
+    margin-top: 120px;
+  }
+}
+
+/* ========================
+   Formulário de Agendamento
+======================== */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+form {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+fieldset {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: white;
+  margin-bottom: 25px;
+}
+
+legend {
+  font-weight: bold;
+  color: #555;
+  padding: 0 10px;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+button[type="button"] {
+  background-color: #007bff;
+  color: white;
+}
+
+button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+}
+
+button:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#back2,
+#back3,
+#back4 {
+  background-color: #6c757d;
+}
+
+/* Link para histórico */
+a[href="historico.html"] {
+  text-decoration: none;
+  color: #0d6efd;
+  display: inline-block;
+  margin-top: 10px;
+}

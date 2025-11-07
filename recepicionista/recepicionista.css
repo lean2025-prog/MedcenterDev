@@ -1,0 +1,197 @@
+/* recepicionista.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 30px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+#listaAgendamentos {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+}
+
+.agendamento {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-left: 5px solid #667eea;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.agendamento:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.agendamento h3 {
+    color: #667eea;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 8px;
+}
+
+.agendamento p {
+    margin: 8px 0;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.agendamento strong {
+    color: #555;
+}
+
+/* Estilos para os status */
+.status-analise {
+    color: #ff9800;
+    font-weight: bold;
+    background: #fff3e0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.status-negado {
+    color: #f44336;
+    font-weight: bold;
+    background: #ffebee;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.status-executada {
+    color: #4caf50;
+    font-weight: bold;
+    background: #e8f5e8;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.motivo {
+    background: #fff9c4;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border-left: 3px solid #ffd54f;
+}
+
+.motivo strong {
+    color: #ff6f00;
+}
+
+/* Estilo para o select */
+select {
+    padding: 8px 12px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    background: white;
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Campo de motivo */
+.motivo-input {
+    padding: 8px 12px;
+    margin-top: 8px;
+    width: 100%;
+    max-width: 300px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.motivo-input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Botões */
+button {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin: 0 10px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Container dos botões */
+body > button {
+    display: block;
+    margin: 20px auto;
+    min-width: 200px;
+}
+
+/* Mensagem quando não há agendamentos */
+#listaAgendamentos p {
+    text-align: center;
+    color: black;
+    font-size: 1.2em;
+    margin-top: 50px;
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .agendamento {
+        padding: 15px;
+    }
+    
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+        margin: 5px;
+    }
+}

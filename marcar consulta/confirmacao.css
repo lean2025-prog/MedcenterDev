@@ -1,0 +1,72 @@
+/* marca.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h2 {
+    color: #2c80b9;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+fieldset {
+    border: 2px solid #2c80b9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: white;
+}
+
+legend {
+    font-weight: bold;
+    color: #2c80b9;
+    padding: 0 10px;
+}
+
+select, input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+button {
+    background-color: #2c80b9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #1f6da0;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+a {
+    color: #2c80b9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

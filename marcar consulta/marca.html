@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="marca.css">
+  <title>Agendamento passo a passo</title>
+</head>
+<body>
+   <header class="topbar">
+    <div class="brand">
+      <span class="brand-med">Medcenter</span><span class="brand-dev">Dev</span>
+    </div>
+
+   
+  </header>
+  <h2>Agendamento (um passo por vez)</h2>
+
+  <form id="wizardForm">
+    <!-- Tela 1 -->
+    <fieldset id="tela1">
+      <legend>1) Escolha a especialidade</legend>
+      <select id="especialidade" required>
+        <option value="">-- Selecione --</option>
+        <option value="cardiologia">Cardiologia</option>
+        <option value="dermatologia">Dermatologia</option>
+        <option value="ortopedia">Ortopedia</option>
+      </select>
+      <br><br>
+      <button type="button" id="next1">Próximo</button>
+    </fieldset>
+
+    <!-- Tela 2 -->
+    <fieldset id="tela2" hidden>
+      <legend>2 Escolha o médico</legend>
+      <select id="medico" required>
+        <option value="">-- Selecione --</option>
+        <option value="dr_ana">Dra. Ana</option>
+        <option value="dr_joao">Dr. João</option>
+        <option value="dr_maria">Dra. Maria</option>
+      </select>
+      <br><br>
+      <button type="button" id="back2">Voltar</button>
+      <button type="button" id="next2" >Próximo</button>
+    </fieldset>
+
+    <!-- Tela 3 -->
+    <fieldset id="tela3" hidden>
+      <legend>3) Escolha a data</legend>
+      <input id="data" type="date" required />
+      <br><br>
+      <button type="button" id="back3">Voltar</button>
+      <button type="button" id="next3" >Próximo</button>
+    </fieldset>
+
+    <!-- Tela 4 -->
+    <!-- Tela 4 -->
+    <fieldset id="tela4" hidden>
+      <legend>4) Escolha a hora</legend>
+      <input id="hora" type="time" required />
+      <br><br>
+      <button type="button" id="back4">Voltar</button>
+      <button type="submit" id="submitBtn" >Enviar</button>
+    </fieldset>
+  </form>
+
+  
+  <script src="marca.js"></script>
+<br><br>
+
+</body>
+</html>

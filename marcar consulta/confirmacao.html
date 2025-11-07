@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/marcar consulta/confirmacao.css">
+    <title>Confirmação do Agendamento</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .info { background: #f5f5f5; padding: 20px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Agendamento Confirmado!</h1>
+    
+    <div class="info">
+        <h3>Detalhes do Agendamento:</h3>
+        <p><strong>Especialidade:</strong> <span id="confirmaEspecialidade"></span></p>
+        <p><strong>Médico:</strong> <span id="confirmaMedico"></span></p>
+        <p><strong>Data:</strong> <span id="confirmaData"></span></p>
+        <p><strong>Hora:</strong> <span id="confirmaHora"></span></p>
+    </div>
+    
+    <br>
+    <button onclick="window.location.href='marca.html'">Fazer Novo Agendamento</button>
+    <br>
+   <a href="/main/main.html" class="btn btn-secondary">home</a>
+
+    <script>
+    // Recupera os dados do localStorage e exibe o ÚLTIMO agendamento
+    const agendamentos = JSON.parse(localStorage.getItem("agendamentos")) || [];
+    
+    if (agendamentos.length > 0) {
+        // Pega o último agendamento (o mais recente)
+        const ultimoAgendamento = agendamentos[agendamentos.length - 1];
+        
+        document.getElementById('confirmaEspecialidade').textContent = ultimoAgendamento.especialidade;
+        document.getElementById('confirmaMedico').textContent = ultimoAgendamento.medico;
+        document.getElementById('confirmaData').textContent = ultimoAgendamento.data;
+        document.getElementById('confirmaHora').textContent = ultimoAgendamento.hora;
+    }
+    </script>
+</body>
+</html>
